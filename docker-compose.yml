@@ -1,0 +1,45 @@
+services:
+  db:
+    image: postgres:16-alpine
+    # Local-dev credentials — override via .env for production
+    environment:
+      POSTGRES_USER: agrivest
+      POSTGRES_PASSWORD: agrivest
+      POSTGRES_DB: agrivest
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U agrivest"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: api
+    environment:
+      PORT: "8080"
+      NODE_ENV: production
+      DATABASE_URL: postgresql://agrivest:agrivest@db:5432/agrivest
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - api
+
+volumes:
+  postgres_data:
