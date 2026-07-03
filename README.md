@@ -68,6 +68,9 @@ pnpm run typecheck
 pnpm run build
 ```
 
+If your Postgres instance requires authentication, use the full form:
+`postgresql://<user>:<password>@localhost:5432/agrivest`.
+
 ## Common Commands
 
 - `pnpm run typecheck` — full workspace typecheck
