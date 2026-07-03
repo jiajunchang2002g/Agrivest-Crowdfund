@@ -3,14 +3,16 @@
 Hosted on replit at: https://agrivest-crowdfund--jiajunchang2002.replit.app
 
 <img width="2560" height="1600" alt="image" src="https://github.com/user-attachments/assets/a714ac2a-b702-4f72-a617-bc193bf61de9" />
+<img width="2560" height="1600" alt="image" src="https://github.com/user-attachments/assets/93c76389-8e93-4a7d-aa11-4d84a23b38ca" />
 <img width="2560" height="1600" alt="image" src="https://github.com/user-attachments/assets/54b477ab-d91e-4478-ad97-7b6b872e30e4" />
+<img width="2560" height="1424" alt="image" src="https://github.com/user-attachments/assets/ac1e623b-5257-4718-8531-ef958d6eb46e" />
 
 Here's what was built:
 
-Pages
+### Pages
 
-Home — Hero, live platform stats (5 campaigns, 7,990 XRP raised), featured campaign grid, how-it-works section
-Explore — Browse/filter campaigns by status and category, with search
+**Home** — Hero, live platform stats (5 campaigns, 7,990 XRP raised), featured campaign grid, how-it-works section
+**Explore** — Browse/filter campaigns by status and category, with search
 Campaign Detail — Full detail with progress bar, investor list, invest form with XRPL escrow lock, release/cancel escrow actions with tx hash links to XRPL explorer
 Create Campaign — Farmer posts a campaign with their XRPL wallet, goal, deadline, and crop category
 Dashboard — Enter any XRPL wallet address to see your campaigns and investments with escrow status chips (Escrowed, Released, Returned)
