@@ -61,7 +61,7 @@ pnpm approve-builds --all
 Then set your environment and run the workspace checks:
 
 ```bash
-export DATABASE_URL="******localhost:5432/agrivest"
+export DATABASE_URL="postgresql://localhost:5432/agrivest"
 export PORT=5000
 export BASE_PATH=/
 pnpm run typecheck
